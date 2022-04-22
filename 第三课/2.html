@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="" class="input1">+<input type="text" class="input2" value="">=<span>?</span>
+    <button onclick="qh()">求和</button>
+
+</body>
+</html>
+<script>
+    var in1=document.querySelector(".input1")
+    var in2=document.querySelector(".input2")
+    var span=document.querySelector("span")
+    console.log(in1,in2);
+    function qh(){
+        var sum=Number(in1.value)+Number(in2.value);
+        console.log(sum);
+        span.innerHTML=sum
+    }
+</script>

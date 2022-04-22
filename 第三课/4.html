@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="" class="inp1">vs<input type="text" name="" id="" class="inp2"><button onclick="ma()">最大的是</button><span></span>
+</body>
+</html>
+<script>
+    var in1=document.querySelector(".inp1")
+    var in2=document.querySelector(".inp2")
+    var s1=document.querySelector("span")
+    function ma(){
+        var max=in1.value
+        var min=in2.value
+        var num=s1.value
+        console.log(max,min);
+        if(max>min){
+            alert(max)
+            num=max
+            s1.innerHTML=max
+        }else{
+            alert(min)
+            num=min
+            s1.innerHTML=min
+        }
+    }
+</script>
