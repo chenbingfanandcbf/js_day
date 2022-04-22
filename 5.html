@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="red()">点击盒子变成红色</button>
+    <div class="box1">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+</body>
+</html>
+<script>
+    var div=document.querySelectorAll("div")
+    function red(){
+        for(var i=1; i<div.length; i++){
+            console.log(div[i]);
+            div[i].style.backgroundColor="red"
+        }
+    }
+</script>
+<style>
+    .box1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border:none;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 1px #000 solid;
+    }
+</style>

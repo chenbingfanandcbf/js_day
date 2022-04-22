@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1" onmousemove="go()" onmouseout="lo()">
+        <input type="checkbox" name="" id="">
+        两周之内登录过
+    </p>
+    <p class="p2">测试</p>
+</body>
+</html>
+<script>
+    var p1=document.querySelector(".p1")
+    var p2=document.querySelector('.p2')
+    function go(){
+        p2.style.display="block"
+    }
+    function lo(){
+        p2.style.display="none"
+    }
+</script>
+<style>
+    p{
+        width: 200px;
+        height: 20px;
+    }
+    .p2{
+        display: none;
+    }
+</style>

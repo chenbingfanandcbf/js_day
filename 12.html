@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h3>车标展示</h3>
+        <div class="boxx">
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+                </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+                </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+                </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+                </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+            </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+            </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+            </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+            </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+            </div>
+            <div class="box1">
+                <p>
+                    lambojini
+                    兰博基尼
+                </p>
+                <img src="../第二课/img/1.jpg" alt="" style="display: none;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var p=document.querySelectorAll(".box1>p")
+    var img=document.querySelectorAll(".box1>img")
+    var box=document.querySelectorAll(".box1")
+    for(var i=0; i<box.length; i++){
+        box[i].index=i
+        box[i].onmouseover=function(){
+            for(var i=0; i<p.length; i++){
+                p[this.index].style.display="none"
+                p[this.index].style.background=""
+            }
+            for(var j=0; j<img.length; j++){
+                img[this.index].style.display="block"
+            }
+        }
+        box[i].onmouseout=function(){
+            img[this.index].style.display="none"
+            p[this.index].style.display="block"
+            p[this.index].style.background="#ddd"
+        }
+    }
+</script>
+<style>
+    .box{
+        width: 600px;
+        height: 350px;
+        border: solid 1px #000;
+    }
+    .boxx{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h3{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .box1{
+        width: 100px;
+        height: 100px;
+        padding-left: 10px;   
+        margin: 5px;
+    }
+    p{
+        width: 100%;
+        height: 100%;
+        background: #ddd;
+        padding: 0;
+        margin: 0;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+</style>
