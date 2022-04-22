@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="kk()">输入法</button>
+    <ul>
+        <li>简写</li>
+        <li>拼音</li>
+        <li class="gb">关闭</li>
+    </ul>
+</body>
+</html>
+<script>
+    var btn=document.querySelector("button")
+    var ul=document.querySelector("ul")
+    var li=ul.querySelectorAll("li")
+    var gb=document.querySelector(".gb")
+    gb.onclick=function(){
+        ul.style.display="none"
+    }
+    function kk(){
+        if(ul.style.display!="block"){
+            ul.style.display="block"
+        }else{
+            gb.onclick()
+        }
+        for (var i=0; i<li.length; i++){
+            console.log(li[i]);
+            li[i].onmousemove=function(){
+               this.style.background="red"
+            }
+            li[i].onmouseout=function(){
+                this.style.background="none"
+            }
+        }
+        
+    }
+</script>
+<style>
+    ul{
+        width: 54px;
+        list-style: none;
+        border: solid 1px #000;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        display: none;
+    }
+    li{
+        border: solid 1px #000;
+    }
+</style>

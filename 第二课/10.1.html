@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+       <div class="boxx">
+        <div class="box1">
+            <img src="../第二课/image/big_1.jpg" alt="" style="display: block; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_2.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_3.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_4.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_5.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_6.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_7.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_8.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_9.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_10.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+            <img src="../第二课/image/big_11.jpg" alt="" style="display: none; width: 100%;height: 100%;">
+        </div>
+        <div class="box1-2">
+            <div class="box2">
+                <img src="../第二课/image/small_1.jpg" alt="" style="width: 100px;">
+            </div>
+            <div class="box2">
+                <img src="../第二课/image/small_2.jpg" alt=""  style="width: 100px;">
+            </div>
+        </div>
+    </div>
+    <div class="box1-2">
+           <div class="box2">
+               <img src="../第二课/image/small_3.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_4.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_5.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_6.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_7.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_8.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_9.jpg" alt="">
+           </div>
+           <div class="box2">
+               <img src="../第二课/image/small_10.jpg" alt="">
+           </div>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+    var img1=document.querySelectorAll(".box1>img")
+    var img=document.querySelectorAll(".box2>img")
+    for(var i=0; i<img.length; i++){
+        console.log(img[i]);
+        img[i].index=i
+        img[i].onmouseover=function(){
+            for(var j=0; j<img1.length; j++){
+            img1[this.index].style.display="none"
+            }
+            img1[this.index].style.display="block"
+        }
+        img[i].onmouseout=function(){
+            img1[this.index].style.display="none"
+        }
+    }
+</script>
+<style>
+    .box{
+        width: 280px;
+        height: 300px;
+        background: firebrick;
+    }
+    .boxx{
+        width: 280px;
+        height: 160px;
+        background: #000;
+        display: flex;
+    }
+    .box1{
+        width: 160px;
+        height: 160px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .box2{
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+    }
+    .box1-2{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>

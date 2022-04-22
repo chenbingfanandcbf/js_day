@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <p>
+            属性名：<input id="in1" type="text" value="background-color">
+        </p>
+        <p>
+            属性值：<input id="in2" type="text" value="red">
+        </p>
+        <p>
+            <button onclick="yes()">确定</button>
+            <button onclick="cz()">重置</button>
+        </p>
+        <div class="box">
+            在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。
+        </div>
+    </center>
+</body>
+</html>
+<script>
+    var inp1=document.querySelector('p>#in1')
+    console.log(inp1.value);
+    var inp2=document.querySelector('p>#in2')
+    var box=document.querySelector(".box")
+    var x=inp1.value
+    var y=inp2.value
+    function yes(){
+        console.log(inp1,inp2);
+        box.style.cssText=x+":"+y
+    }
+    function cz(){
+        box.style.cssText=""
+    }
+</script>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        color: white;
+    }
+</style>

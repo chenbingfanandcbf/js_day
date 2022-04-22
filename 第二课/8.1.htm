@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <h1>1</h1>
+            <h1>JAN</h1>
+        </div>
+        <div class="box1">
+            <h1>2</h1>
+            <h1>FER</h1>
+        </div>
+        <div class="box1">
+            <h1>3</h1>
+            <h1>MAR</h1>
+        </div>
+        <div class="box1">
+            <h1>4</h1>
+            <h1>APR</h1>
+        </div>
+        <div class="box1">
+            <h1>5</h1>
+            <h1>MAY</h1>
+        </div>
+        <div class="box1">
+            <h1>6</h1>
+            <h1>JUN</h1>
+        </div>
+        <div class="box1">
+            <h1>7</h1>
+            <h1>JUL</h1>
+        </div>
+        <div class="box1">
+            <h1>8</h1>
+            <h1>AUG</h1>
+        </div>
+        <div class="box1">
+            <h1>9</h1>
+            <h1>SEP</h1>
+        </div>
+        <div class="box1">
+            <h1>10</h1>
+            <h1>OCT</h1>
+        </div>
+        <div class="box1">
+            <h1>11</h1>
+            <h1>NOV</h1>
+        </div>
+        <div class="box1">
+            <h1>12</h1>
+            <h1>DEC</h1>
+        </div>
+        <p style="display: block;">
+           <span style="font-weight: 900;">1月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">2月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">3月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">4月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">5月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">6月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">7月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">8月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">9月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">10月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">11月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+        <p style="display: none;">
+           <span style="font-weight: 900;">12月节日</span>元旦：1月1日至3日放假三天 
+        </p>
+    </div>
+</body>
+</html>
+<script>
+    var div=document.querySelectorAll(".box1")
+    var p=document.querySelectorAll("p")
+    for(var i=0; i<div.length; i++){
+        div[i].index=i
+        div[i].onmouseover=function(){
+            for(var j=0; j<div.length; j++){
+                this.style.background="#fff"
+                this.style.color="red"
+                this.style.border="solid 1px #000"
+            }
+            for(var i=0;i<p.length; i++){
+                p[i].style.display="none"
+            }
+            p[this.index].style.display="block"
+        }
+        div[i].onmouseout=function(){
+            this.style.background=""
+            this.style.color=""
+            this.style.border=""
+        }
+    }
+</script>
+<style>
+    .box{
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        background: rgb(124, 116, 116);
+        justify-content: center;
+    }
+    .box1{
+        width: 100px;
+        height: 100px;
+        background: #000;
+        color: #fff;
+        margin: 5px;
+        text-align: center;
+    }
+    h1{
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        width: 85%;
+        height:60px;
+        line-height:60px;
+        background: rgba(92, 39, 22, 0.133);
+        margin: auto;
+        padding: 0;
+        margin: 0;
+    }
+    /* span{
+        font-weight: 500;
+    } */
+</style>
